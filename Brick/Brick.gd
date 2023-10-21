@@ -47,7 +47,6 @@ func die():
 	dying = true
 	#collision_layer = 0
 	$Confetti.emitting = true
-	$ColorRect.hide()
 	
 	$CollisionShape2D.queue_free()
 	get_parent().check_level()
