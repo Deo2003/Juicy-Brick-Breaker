@@ -25,11 +25,13 @@ script = ExtResource("1")
 position = Vector2(50, 10)
 shape = SubResource("1")
 
-[node name="Paddle" type="Sprite2D" parent="."]
+[node name="Images" type="Node2D" parent="."]
+
+[node name="Paddle" type="Sprite2D" parent="Images"]
 position = Vector2(50, 10)
 texture = ExtResource("2_vcfix")
 
-[node name="Highlight" type="Sprite2D" parent="."]
+[node name="Highlight" type="Sprite2D" parent="Images"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(50, 10)
 texture = ExtResource("3_4y70g")

@@ -9,8 +9,6 @@ func _ready():
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		var level = Levels.levels[Global.level]
-		#var margin = level["layout_start"]
-		#var index = level["layout_spacing"]
 		var layout = level["layout"]
 		var Brick_Container = get_node_or_null("/root/Game/Brick_Container")
 		Global.time = level["timer"]

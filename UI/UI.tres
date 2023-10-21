@@ -1,8 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://bujtifaa0oq7o"]
 
-[ext_resource type="FontFile" uid="uid://dxjkiyn4ew671" path="res://Assets/LeagueGothic-Regular.otf" id="1_o4uql"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26mav"]
+[sub_resource type="StyleBoxFlat" id="2"]
 bg_color = Color(0.52549, 0.556863, 0.588235, 1)
 border_width_left = 3
 border_width_top = 3
@@ -14,7 +12,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3u1h"]
+[sub_resource type="StyleBoxFlat" id="3"]
 bg_color = Color(0.0941176, 0.392157, 0.670588, 1)
 border_width_left = 3
 border_width_top = 3
@@ -26,7 +24,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsbs5"]
+[sub_resource type="StyleBoxFlat" id="4"]
 bg_color = Color(0.0941176, 0.392157, 0.670588, 1)
 border_width_left = 3
 border_width_top = 3
@@ -38,7 +36,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4guuv"]
+[sub_resource type="StyleBoxFlat" id="5"]
 bg_color = Color(0.0941176, 0.392157, 0.670588, 1)
 border_width_left = 3
 border_width_top = 3
@@ -50,8 +48,8 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4042"]
-bg_color = Color(0.133333, 0.545098, 0.901961, 1)
+[sub_resource type="StyleBoxFlat" id="6"]
+bg_color = Color(0.0941176, 0.392157, 0.670588, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -61,15 +59,42 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([null])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
 
 [resource]
-default_font = ExtResource("1_o4uql")
-default_font_size = 22
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/fonts/font = ExtResource("1_o4uql")
-Button/styles/disabled = SubResource("StyleBoxFlat_26mav")
-Button/styles/focus = SubResource("StyleBoxFlat_x3u1h")
-Button/styles/hover = SubResource("StyleBoxFlat_lsbs5")
-Button/styles/normal = SubResource("StyleBoxFlat_4guuv")
-Button/styles/pressed = SubResource("StyleBoxFlat_u4042")
-Label/fonts/font = ExtResource("1_o4uql")
+Button/colors/font_color_disabled = Color(0.286275, 0.313726, 0.341176, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = null
+Button/styles/disabled = SubResource("2")
+Button/styles/focus = SubResource("3")
+Button/styles/hover = SubResource("4")
+Button/styles/normal = SubResource("5")
+Button/styles/pressed = SubResource("6")
+Label/font_sizes/font_size = 30
+Label/fonts/font = SubResource("7")

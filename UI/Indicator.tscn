@@ -1,7 +1,14 @@
-[gd_scene format=3 uid="uid://dywcp8o4vsibs"]
+[gd_scene load_steps=3 format=3 uid="uid://dywcp8o4vsibs"]
+
+[ext_resource type="Texture2D" uid="uid://c0riav0ka8wnp" path="res://Assets/ballGrey.png" id="1_ndylk"]
+[ext_resource type="Texture2D" uid="uid://dn4d3yi1e4lrr" path="res://Assets/ballBlue.png" id="2_cduh6"]
 
 [node name="Indicator" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 10.0
-offset_bottom = 10.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ndylk")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cduh6")
