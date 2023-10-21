@@ -19,6 +19,8 @@ var tween
 
 var distort_effect = 0.0002
 
+var h_rotate = 0.0
+
 var released = true
 
 var initial_velocity = Vector2.ZERO
@@ -58,8 +60,11 @@ func _integrate_forces(state):
 		var paddle = get_node_or_null("/root/Game/Paddle_Container/Paddle")
 		if paddle != null:
 			state.transform.origin = Vector2(paddle.position.x, paddle.position.y - 30)	
+	
 	wobble()
 	distort()
+	comet()
+	
 	if position.y > Global.VP.y + 100:
 		die()
 	if accelerate:
@@ -81,9 +86,6 @@ func change_size(s):
 func change_speed(s):
 	speed_multiplier = s
 
-func die():
-	queue_free()
-	
 func wobble():
 	wobble_period += 1
 	if wobble_amplitude > 0:
@@ -95,3 +97,18 @@ func distort():
 	var direction = Vector2(1 + linear_velocity.length() * distort_effect, 1 - linear_velocity.length() * distort_effect)
 	$Images.rotation = linear_velocity.angle()
 	$Images.scale = direction
+
+func comet():
+	h_rotate = wrapf(h_rotate+0.01, 0, 1)
+	var Comet_Container = get_node_or_null("/root/Game/Comet_Container")
+	if Comet_Container != null:
+		var sprite = $Images/Sprite.duplicate()
+		sprite.global_position = global_position
+		sprite.modulate.s = 0.6
+		sprite.modulate.h = h_rotate
+		Comet_Container.add_child(sprite)
+
+func die():
+	queue_free()
+	
+
